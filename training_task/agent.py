@@ -38,7 +38,7 @@ def agent(question, max_steps=6):
             model=MODEL,
             messages=messages,
             tools=TOOLS,
-            tool_choice="auto",
+           tool_choice="required" if step == 1 else "auto",
             temperature=0,
         )
 
